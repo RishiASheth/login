@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../styles/Auth.css";
 
 const Signup = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -10,29 +15,35 @@ const Signup = () => {
       const response = await axios.post("http://localhost:5000/api/signup", formData);
       alert(response.data.message);
     } catch (error) {
-      console.error("Error during signup:", error.response.data.message);
+      console.error("Error during signup:", error.response?.data?.message || error.message);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Signup</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={formData.password}
-        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-        required
-      />
-      <button type="submit">Signup</button>
-    </form>
+    <div className="auth-container">
+      <h1>Signup</h1>
+      <form className="auth-form" onSubmit={handleSubmit}>
+        <label>Email:</label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Enter your email"
+          required
+        />
+        <label>Password:</label>
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          placeholder="Enter your password"
+          required
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   );
 };
 
