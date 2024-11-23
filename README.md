@@ -1,8 +1,42 @@
-# React + Vite
+# Login and Signup Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple login and signup page built with **React** (initialized via Vite) and **MongoDB**.
 
-Currently, two official plugins are available:
+## Features
+- User Signup
+- User Login
+- Redirection after login/signup
+- Option page with navigation buttons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+- Node.js installed
+- MongoDB Atlas or local MongoDB setup
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Update MongoDB connection:
+   - Open server/server.js.
+   - Replace the MongoDB connection string with your own.
+
+## Usage
+1. Start the backend server:
+   ```bash
+   node server/server.js
+
+2. Start the frontend:
+   ```bash
+   npm run dev
+
+3. Open your browser and navigate to: http://localhost:5173
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LISCENCE.md) for details.
