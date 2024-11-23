@@ -42,4 +42,4 @@ The Options Page (accessible after login) is an additional feature implemented a
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LISCENCE.md) for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) for details.
