@@ -37,6 +37,9 @@ A simple login and signup page built with **React** (initialized via Vite) and *
 
 3. Open your browser and navigate to: http://localhost:5173
 
+## Note
+The Options Page (accessible after login) is an additional feature implemented as part of a personal project. It can be removed or modified based on your requirements.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LISCENCE.md) for details.
